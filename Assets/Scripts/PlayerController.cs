@@ -5,8 +5,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private float speed = 3.0f;
-    private Rigidbody playerRb;
     private float zBound = 10.0f;
+
+    private Rigidbody playerRb;
 
     // Start is called before the first frame update
     void Start()
@@ -17,13 +18,22 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        MovePlayer();
+        ConstrainPlayerPosition();
+    }
+  
+    private void MovePlayer()
+    {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
         playerRb.AddForce(Vector3.forward * speed * verticalInput, ForceMode.Force);
         playerRb.AddForce(Vector3.right * speed * horizontalInput, ForceMode.Force);
+    }
 
-        if (transform.position.z > zBound )
+    private void ConstrainPlayerPosition()
+    {
+        if (transform.position.z > zBound)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, zBound);
         }
