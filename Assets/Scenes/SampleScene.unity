@@ -675,6 +675,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33722afc2b06af64388f567dcae4279b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zEnemySpawn: 12
+  xEnemySpawnRange: 16
+  zPowerUpSpawnRange: 5
+  ySpawn: 0.75
+  startDelay: 1
+  enemySpawnRate: 3
+  powerUpSpawnRate: 5
+  enemy:
+  - {fileID: 3526360558988423232, guid: d72c90aaeada8d0478b8b086d8f12c80, type: 3}
+  - {fileID: 709630387635401490, guid: 9a230d54ac070254e93c1eb2c3029834, type: 3}
+  - {fileID: 3990552603629650623, guid: 4ae4594399bc53a438f59812c4398d99, type: 3}
+  - {fileID: 8787839717817524149, guid: eea0a8a0d4677f243b2d505e1cb5d888, type: 3}
+  powerUp: {fileID: 6925859560456513559, guid: 2aab1701cb841b841980037b2506186b, type: 3}
 --- !u!4 &1343651079
 Transform:
   m_ObjectHideFlags: 0
