@@ -24,10 +24,10 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    void EnemyRandomSpawn() 
+    void EnemyRandomSpawn()
     {
         float posX = Random.Range(-xEnemySpawnRange, xEnemySpawnRange);
         Vector3 randomPos = new Vector3(posX, ySpawn, zEnemySpawn);
